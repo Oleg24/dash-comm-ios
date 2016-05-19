@@ -1,37 +1,29 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * Dash Communication
+ * Created by olegyanchinskiy 5.12.16
  */
 
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+
+import React, { AppRegistry, Component, Text, View } from 'react-native'
+import ViewContainer from './app/components/ViewContainer'
+import StatusBarBackground from './app/components/StatusBarBackground'
+
+var Button = require('react-native-button');
 
 class dashCommunication extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <ViewContainer>
+        <StatusBarBackground style={{backgroundColor: 'mistyrose' }}/>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Welcome to Dash Communication!
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+      </ViewContainer>
     );
   }
 }
 
-const styles = StyleSheet.create({
+const styles = React.StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -39,12 +31,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   welcome: {
+    flex: 1,
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
   },
   instructions: {
-    textAlign: 'center',
+    textAlign: 'left',
     color: '#333333',
     marginBottom: 5,
   },
